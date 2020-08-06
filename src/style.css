@@ -1,0 +1,101 @@
+:root {
+    --fundo-primaria: #000931;
+    --texto-primario: #dedddd;
+}
+
+/* @font-face {
+    font-family: etna;
+    src: url(src/fonte/etna.otf);
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--fundo-primaria);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr 1fr 1fr;
+}
+
+.logo {
+    display: flex;
+
+    grid-column: 2;
+    grid-row: 1;
+
+    justify-content: center;
+    align-content: center;
+}
+
+#img-logo {
+    display: block;
+    width: 60%;
+    margin-top: 50px;
+}
+
+.contatos {
+    grid-column: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: var(--texto-primario);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contato {
+    width: 250px;
+    display: flex;
+    margin: 5px;
+}
+
+h1 {
+    text-indent: 25px;
+}
+
+.contato a, p {
+    display: inline;
+    text-indent: 10px;
+    text-decoration: none;
+    color: var(--texto-primario);
+}
+
+.contato img {
+    width: 20px;
+}
+
+#contato-1 {
+    display: block;
+    margin: 50px 0;
+}
+
+#contato-2 {
+    display: block;
+    margin: 0px 0px 50px 0px;
+}
+
+#contato-empresa {
+    display: block;
+}
+
+
+@media screen and (max-width:600px){
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .logo {
+        grid-column: 1;
+    }
+
+    .contatos {
+        grid-column: 1;
+    }
+}
+
+
